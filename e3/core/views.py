@@ -23,5 +23,5 @@ def form_libro(request):
             
     return render (request, 'core/form_libro.html', datos)
 
-    def modificarlibro(request):
+    def form_modificar_libro(request):
     return render(request, 'core/form_modificar_libro.html')
