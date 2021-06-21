@@ -7,7 +7,7 @@
     {% load static %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/Style.css' %}">
     <title>Biblio.net</title>
   </head>
   
@@ -25,10 +25,10 @@
             
             
             <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#">Registrate</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ingreso</a>
+                <a class="nav-link" href="#">Registrar Libro</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -52,19 +52,19 @@
             
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{% static 'core/img/portada_mitos-y-leyendas-dominio.jpg'%}" class="d-block w-100" alt="...">
+                <img id="fotos"src="{% static 'core/img/portada_mitos-y-leyendas-dominio.jpg'%}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{% static 'core/img/portada_a-fuego-lento.jpg'%}" class="d-block w-100" alt="...">
+                <img id="fotos"src="{% static 'core/img/portada_a-fuego-lento.jpg'%}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{% static 'core/img/portada_la-esposa-del-prisionero.jpg'%}" class="d-block w-100" alt="...">
+                <img id="fotos"src="{% static 'core/img/portada_la-esposa-del-prisionero.jpg'%}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   
                 </div>
