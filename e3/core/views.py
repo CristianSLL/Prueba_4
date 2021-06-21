@@ -20,4 +20,4 @@ def form_libro(request):
         if formulario.is_valid:
             formulario.save()
             datos['mensje']= "Datos Guardados Exitosamente"
-    return render (request, 'core/form_libro.html', dato)
+    return render (request, 'core/form_libro.html', datos)
