@@ -10,7 +10,7 @@ h1{
 }
 
 
-.banner{
+#banner{
     width: 100%;
 }
 
@@ -37,7 +37,3 @@ footer{
     width: 150px; height: 700px;
 
 }
-#pie{
-    background-color:rgb(49, 44, 44);
-    width:100%;
-}  
