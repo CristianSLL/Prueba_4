@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'localhost:1521',
         'USER': 'System',
-        'PASSWORD': 'melanie', 
+        'PASSWORD': 'system', 
          'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
