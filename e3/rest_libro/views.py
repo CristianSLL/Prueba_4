@@ -25,6 +25,30 @@ def lista_libros(request):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET', 'PUT', 'DELETE'])
+def detalle_libro(request, id):
+    """
+    GET, UPDATE O DELETE de un libro 
+
+    """
+    try: 
+        libro = Libro.objects.get(isbn=id) 
+    except Libro.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    if request.method == 'GET':
+        serializer = LibroSerializer(libro)
+        return Response(serializer.data)
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+        serializer = LibroSerializer(libro, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        libro.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# Create your views here.
+
