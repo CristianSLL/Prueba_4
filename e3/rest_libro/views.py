@@ -10,7 +10,7 @@ from .serializers import LibroSerializer
 @api_view(['GET', 'POST'])
 def lista_libros(request):
     """
-    Lista de todos los libro
+    Lista de todos los libros
     """
     if request.method == 'GET':
         libro = Libro.objects.all()
