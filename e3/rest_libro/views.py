@@ -10,6 +10,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 @csrf_exempt
 @api_view(['GET', 'POST'])
+@permission_classes((IsAuthenticated,))
 def lista_libros(request):
     """
     Lista de todos los libros
@@ -28,6 +29,7 @@ def lista_libros(request):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes((IsAuthenticated,))
 def detalle_libro(request, id):
     """
     GET, UPDATE O DELETE de un libro 
